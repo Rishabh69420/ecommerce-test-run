@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:{os.getenv("password")}@localhost/test'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://postgres:{os.getenv("password")}@localhost/postgres'
 
 db = SQLAlchemy(app)
 
@@ -36,8 +36,11 @@ def submit():
         profn = request.form['profn']
 
     test_db = Table(sno, name, profn)
+    print(test_db)
     db.session.add(test_db)
     db.session.commit()
+
+    return render_template('success.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

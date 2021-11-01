@@ -13,20 +13,22 @@ body {
 
 .header {
     background:linear-gradient(to right, orange, rgb(255, 60, 0));
-    height: 120px;
     width: 100%;
     box-shadow: 0 0 10px 2px rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
     font-size: 2em;
 }
 
-.headerContent {
-    border-right: 1px solid black;
+.headerbar {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+}
+
+.logo {
     padding: 10px;
     font-family: tex;
     width: 25%;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .search {
@@ -43,7 +45,7 @@ body {
     vertical-align: middle;
     border-radius: 7.5px 0 0 7.5px;
     padding: 10px 10px 10px 10px;
-    transition: box-shadow ease-in-out 50ms;
+    transition: box-shadow ease-in-out 75ms;
     color: rgb(78, 78, 78);
 }
 
@@ -53,7 +55,7 @@ body {
 }
 
 .searchButton {
-    width: 50px;
+    width: 52px;
     border-radius: 0 7.5px 7.5px 0;
     background: rgb(69, 69, 212);
 }
@@ -62,6 +64,7 @@ body {
     margin: 6px auto 0 5px;
     width: 40px;
     height: auto;
+    filter: brightness(0) invert(1) brightness(90%);
 }
 
 .nav {
@@ -70,15 +73,18 @@ body {
     text-align: right;
 }
 
-.cart {
-    /* border: 0; */
+.shop {
+    font-size: 0.5rem;
+}
+
+.cart, .home {
     text-decoration: none;
+    height: 100%;
     color: ivory;
-    padding: 1rem;
     background: transparent;
     transition: background ease-in-out 0.15s;
 }
 
-.cart:hover {
+.cart:hover, .home:hover {
     background: rgba(0, 0, 0, 0.185);
 }

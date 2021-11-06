@@ -4,31 +4,35 @@
 }
 
 body {
-    background: #363636;
-    color: rgb(250, 250, 218);
+    background: #f6f6f6;
     font-family: sans-serif;
     margin: 0;
     
 }
 
 .header {
-    background:linear-gradient(to right, orange, rgb(255, 60, 0));
+    background: rgb(36, 36, 36);
     width: 100%;
+    color: rgb(199, 199, 199);
     box-shadow: 0 0 10px 2px rgb(0, 0, 0);
     font-size: 2em;
+    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 5px black;
+    height: 150px;
 }
 
-.headerbar {
+.headercontent {
     display: flex;
+    height: 100%;
+    flex-direction: row;
     align-items: center;
-    padding: 0 1rem 0 1rem;
+    padding: 0 10% 0 10%;
 }
 
-.logo {
-    padding: 10px;
+.brand {
+    padding: auto 0 auto 0;
     font-family: tex;
-    width: 25%;
-    font-size: 3rem;
+    flex: 1;
+    font-size: 4rem;
 }
 
 .search {
@@ -67,24 +71,41 @@ body {
     filter: brightness(0) invert(1) brightness(90%);
 }
 
-.nav {
-    padding: 10px;
-    width: 75%;
+.icons {
+    flex: 2;
     text-align: right;
+    padding: auto 0 auto 0;
+    overflow: hidden;
 }
 
-.shop {
-    font-size: 0.5rem;
-}
-
-.cart, .home {
+#headericons {
     text-decoration: none;
-    height: 100%;
-    color: ivory;
+    color: rgb(199, 199, 199);
     background: transparent;
+    height: 100%;
+    vertical-align: middle;
+    padding: 8px;
+    font-size: 2rem;
     transition: background ease-in-out 0.15s;
 }
 
-.cart:hover, .home:hover {
-    background: rgba(0, 0, 0, 0.185);
+#headericons:hover {
+    background: rgba(83, 83, 83, 0.26);
+}
+
+img {
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.genres {
+    width: 100%;
+    background: rgba(26, 26, 26, 0.431);
+    color: rgb(199, 199, 199);
+    font-size: 1.5rem;
+}
+
+.genreContent {
+    margin: 0 20% 0 20%;
 }

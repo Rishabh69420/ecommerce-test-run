@@ -8,23 +8,64 @@
     {% block head %}{% endblock %}
 </head>
 <body>
-    <div class="header">
-        <div class="headercontent">
-            <div class="brand">
-                Blärf
-            </div>
-            <div class="icons">
-                <ul>
-                    <li><a href="#" class="headericons" id="departments">Departments</a></li><li><a href="#" id="login" class="headericons">Login</a></li><li><a href="#" id="signup" class="headericons">Signup</a></li><li><a href="#" id="search" class="headericons"><img src="/static/Magnifying Glass.svg"></a></li><li><a href="#" id="cart" class="headericons"><img src="/static/shoppingcart.svg"></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- <div class="search">
-            <input class="searchBox" type="text">
-            <a href="#" class="searchButton"><img class="mag" src="/static/search-2907.svg"/>
-            </a>
-        </div> -->
-    </div>
+	<nav class="nav">
+		<div class="logo">
+			Blärf
+		</div>
+		<div class="buttons">
+			<ul class="links">
+				<li>Departments
+					<ul class="deptdrop">
+						<li><a href="#" class="grocery">Grocery</a></li>
+						<li><a href="#" class="electronics">Electronics</a></li>
+						<li><a href="#" class="apparel">Apparel</a></li>
+						<li><a href="#" class="furniture">Furniture</a></li>
+						<li><a href="#" class="kitchenware">Kitchenware</a></li>
+					</ul>
+				</li>
+				<li><a href="#" id="login">Login</a></li>
+				<li><a href="#" id="signup">Signup</a></li>
+				<li><a href="#" id="search" ><img src="/static/Magnifying Glass.svg"></a></li>
+				<li><a href="#" id="cart"><img src="/static/shoppingcart.svg"></a></li>
+			</ul>
+		</div>
+	</nav>
     {% block body %}{% endblock %}
 </body>
 </html>
+
+<!-- 
+
+<div class="header">
+	<div class="headercontent">
+		<div class="brand">
+			Blärf
+		</div>
+		<div class="icons">
+			<ul>
+				<li><a href="#" class="headericons" id="departments">Departments</a>
+					<ul class="deptdrop">
+						<li><a href="#" class="grocery"></a></li>
+						<li><a href="#" class="electronics"></a></li>
+						<li><a href="#" class="apparel"></a></li>
+						<li><a href="#" class="furniture"></a></li>
+						<li><a href="#" class="kitchenware"></a></li>
+					</ul>
+				</li>
+				<li><a href="#" id="login" class="headericons">Login</a></li>
+				<li><a href="#" id="signup" class="headericons">Signup</a></li>
+
+				<li><a href="#" id="search" class="headericons"><img src="/static/Magnifying Glass.svg"></a></li>
+				<li><a href="#" id="cart" class="headericons"><img src="/static/shoppingcart.svg"></a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="search">
+		<input class="searchBox" type="text">
+		<a href="#" class="searchButton"><img class="mag" src="/static/search-2907.svg"/>
+		</a>
+	</div>
+</div>
+
+-->

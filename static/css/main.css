@@ -1,129 +1,80 @@
 @font-face {
-    font-family: tex;
-    src: url("/static/fonts/tex/texbold.otf");
+  font-family: tex;
+  src: url("/static/fonts/tex/texbold.otf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    background: #f6f6f6;
-    font-family: sans-serif;
-    margin: 0;
-    
+  font-family: tex, sans-serif;
+  font-size: 2.5rem;
 }
 
-.header {
-    background: rgb(36, 36, 36);
-    width: 100%;
-    color: rgb(199, 199, 199);
-    box-shadow: 0 0 10px 2px rgb(0, 0, 0);
-    font-size: 2em;
-    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 5px black;
-    height: 150px;
+.nav {
+  width: 100vw;
+  background: #242424;
+  color: #c7c7c7;
+  -webkit-box-shadow: 0 0 10px 2px black;
+          box-shadow: 0 0 10px 2px black;
+  text-shadow: 0 0 10px black, 0 0 5px black;
 }
 
-.headercontent {
-    display: flex;
-    height: 100%;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 10% 0 10%;
-    overflow: hidden;
+.nav .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  position: relative;
 }
 
-.brand {
-    padding: auto 0 auto 0;
-    font-family: tex;
-    flex: 1;
-    font-size: 4rem;
+.nav .links img {
+  width: 3rem;
 }
 
-.searchBox {
-    font-size: 30px;
-    width: 80%;
-    margin-left: 30px;
-    border: 0;
-    vertical-align: middle;
-    border-radius: 7.5px 0 0 7.5px;
-    padding: 10px 10px 10px 10px;
-    transition: box-shadow ease-in-out 75ms;
-    color: rgb(78, 78, 78);
+.nav a {
+  text-decoration: none;
+  color: #c7c7c7;
 }
 
-.searchBox:focus {
-    box-shadow: inset 0px 0px 5px 3px rgb(131, 131, 131);
-    outline: 0;
+.nav li > ul {
+  position: absolute;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.658);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
+  padding: 0 0.5em 0 0.5em;
 }
 
-.searchButton {
-    width: 52px;
-    border-radius: 0 7.5px 7.5px 0;
-    background: rgb(69, 69, 212);
+.nav #signup {
+  background: #31e767;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0.25em;
+  color: ivory;
+  border: solid -2px #31e767;
+  -webkit-transition: -webkit-box-shadow text-shadow ease-in-out 0.2s;
+  transition: -webkit-box-shadow text-shadow ease-in-out 0.2s;
+  transition: box-shadow text-shadow ease-in-out 0.2s;
+  transition: box-shadow text-shadow ease-in-out 0.2s, -webkit-box-shadow text-shadow ease-in-out 0.2s;
 }
 
-.mag {
-    margin: 6px auto 0 5px;
-    width: 40px;
-    height: auto;
-    filter: brightness(0) invert(1) brightness(90%);
+.nav #signup:hover,
+.nav #signup:focus {
+  background: #31e767;
+  -webkit-box-shadow: inset 0 0 10px black;
+          box-shadow: inset 0 0 10px black;
+  text-shadow: 0 0 10px white;
+  border: none;
 }
-
-.icons {
-    flex: 2;
-    text-align: right;
-    height: 100%;
-    list-style: none;
-    box-sizing: border-box;
-}
-
-.icons ul li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-.icons ul{
-    margin: -0.1px 0 0 0;
-}
-
-.headericons {
-    text-decoration: none;
-    color: rgb(199, 199, 199);
-    background: transparent;
-    height: 100%;
-    vertical-align: middle;
-    padding: 8px;
-    font-size: 2rem;
-    transition: background ease-in-out 0.2s;
-}
-
-#signup {
-    background: rgb(49, 231, 103);
-    text-shadow: none;
-    box-shadow: none;
-    border-radius: 0.25em;
-    color: ivory;
-    border: solid -2px rgb(49, 231, 103);
-    transition: box-shadow text-shadow ease-in-out 0.2s;
-}
-
-#signup:hover,
-#signup:focus{
-    background: rgb(49, 231, 103);
-    box-shadow: inset 0 0 10px rgb(0, 0, 0);
-    text-shadow: 0 0 10px rgb(255, 255, 255);
-    border: none;
-}
-
-.headericons:hover {
-    background: rgba(83, 83, 83, 0.26);
-}
-
-#cart img, #search img{
-    width: 2rem;
-    padding: 0;
-    margin: 0;
-    transform: translateY(6px);
-}
-
-#cart, #search {
-    line-height: 5;
-}
+/*# sourceMappingURL=main.css.map */

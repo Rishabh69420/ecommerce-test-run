@@ -12,21 +12,50 @@
           box-sizing: border-box;
 }
 
-body {
-  font-family: tex, sans-serif;
-  font-size: 2.5rem;
-}
-
 .nav {
+  font-family: tex, sans-serif;
+  font-size: 2rem;
   width: 100vw;
+  height: 160px;
   background: #242424;
   color: #c7c7c7;
   -webkit-box-shadow: 0 0 10px 2px black;
           box-shadow: 0 0 10px 2px black;
   text-shadow: 0 0 10px black, 0 0 5px black;
+  padding: 1em 0 1em 0;
 }
 
-.nav .links {
+.nav .wrapper {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.nav .wrapper .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 3.5rem;
+}
+
+.nav .wrapper .buttons {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  height: 100%;
+}
+
+.nav .wrapper .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,27 +64,60 @@ body {
           justify-content: flex-end;
   list-style: none;
   position: relative;
+  float: right;
+  margin-top: 0.65em;
 }
 
-.nav .links img {
-  width: 3rem;
+.nav .wrapper .links li {
+  margin: 0 1rem 0 1rem;
 }
 
-.nav a {
+.nav .wrapper .links img {
+  width: 2.5rem;
+}
+
+.nav .wrapper .links:first-child {
+  position: relative;
+  cursor: pointer;
+  height: 110%;
+}
+
+.nav .wrapper .links:first-child:hover ul, .nav .wrapper .links:first-child:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav .wrapper a {
   text-decoration: none;
   color: #c7c7c7;
+  padding: 0 0.2em 0 0.2em;
 }
 
-.nav li > ul {
+.nav .wrapper li > ul {
   position: absolute;
   list-style: none;
+  padding: 0.5em 0 0.5em 0;
   background-color: rgba(0, 0, 0, 0.658);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.582);
-  padding: 0 0.5em 0 0.5em;
+  -webkit-transform: translateY(55px);
+          transform: translateY(55px);
+  font-size: 1.6rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
-.nav #signup {
+.nav .wrapper li > ul a {
+  padding: none;
+}
+
+.nav .wrapper li > ul li {
+  margin: 0;
+}
+
+.nav .wrapper #signup {
   background: #31e767;
   text-shadow: none;
   -webkit-box-shadow: none;
@@ -69,8 +131,8 @@ body {
   transition: box-shadow text-shadow ease-in-out 0.2s, -webkit-box-shadow text-shadow ease-in-out 0.2s;
 }
 
-.nav #signup:hover,
-.nav #signup:focus {
+.nav .wrapper #signup:hover,
+.nav .wrapper #signup:focus {
   background: #31e767;
   -webkit-box-shadow: inset 0 0 10px black;
           box-shadow: inset 0 0 10px black;

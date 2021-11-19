@@ -52,6 +52,7 @@
             position: relative;
             float: right;
             margin-top: 0.65em;
+            height: 100%;
 
             li {
                 margin: 0 1rem 0 1rem;
@@ -62,7 +63,7 @@
             }
         }
 
-        .links:first-child {
+        .depts {
             position: relative;
             cursor: pointer;
             height: 110%;

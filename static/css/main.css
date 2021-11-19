@@ -66,6 +66,7 @@
   position: relative;
   float: right;
   margin-top: 0.65em;
+  height: 100%;
 }
 
 .nav .wrapper .links li {
@@ -76,13 +77,13 @@
   width: 2.5rem;
 }
 
-.nav .wrapper .links:first-child {
+.nav .wrapper .depts {
   position: relative;
   cursor: pointer;
   height: 110%;
 }
 
-.nav .wrapper .links:first-child:hover ul, .nav .wrapper .links:first-child:focus ul {
+.nav .wrapper .depts:hover ul, .nav .wrapper .depts:focus ul {
   opacity: 1;
   visibility: visible;
 }
